@@ -33,22 +33,22 @@ var RevealChart = window.RevealChart || (function(){
 		// plot the appropriate graph
 		switch(item.type){
 			case "line":
-				module[id].item.Line(item.data,item.options);
+				module[id].item.chart = module[id].item.Line(item.data,item.options);
 				break;
 			case "bar":
-				module[id].item.Bar(item.data,item.options);
+				module[id].item.chart = module[id].item.Bar(item.data,item.options);
 				break;
 			case "radar":
-				module[id].item.Radar(item.data,item.options);
+				module[id].item.chart = module[id].item.Radar(item.data,item.options);
 				break;
 			case "polararea":
-				module[id].item.PolarArea(item.data,item.options);
+				module[id].item.chart = module[id].item.PolarArea(item.data,item.options);
 				break;
 			case "pie":
-				module[id].item.Pie(item.data,item.options);
+				module[id].item.chart = module[id].item.Pie(item.data,item.options);
 				break;
 			case "doughnut":
-				module[id].item.Doughnut(item.data,item.options);
+				module[id].item.chart = module[id].item.Doughnut(item.data,item.options);
 				break;
 		}
 	}
@@ -73,22 +73,17 @@ var RevealChart = window.RevealChart || (function(){
 			module[id].doc.write('<html><body><canvas></canvas></body></html>');
 			module[id].doc.close();
 
-			// get iframe canvas
-			module[id].canvas = module[id].doc.querySelector("canvas");
-
-			// get canvas context
-			module[id].ctx = module[id].canvas.getContext("2d");
-
 			// create new chart with context
-			module[id].item = new Chart(module[id].ctx);
+			module[id].item = new Chart(module[id].doc.querySelector("canvas").getContext("2d"));
+			module[id].item.chart = null;
 
 			// get the appropriate item data
 			var optitem = getOptItem(options,e.target.getAttribute("id"));
 
 			if (optitem != null){
 				// change canvas size
-				module[id].canvas.style.width = optitem.canvas.width;
-				module[id].canvas.style.height = optitem.canvas.height;
+				module[id].item.canvas.style.width = optitem.canvas.width;
+				module[id].item.canvas.style.height = optitem.canvas.height;
 
 				// plot chart
 				plotChart(optitem,id);

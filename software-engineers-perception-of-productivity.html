@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Software developers perception of productivity</title>
+
+		<meta name="description" content="A plugin to integrate chartjs and reveal js">
+		<meta name="author" content="Sagar DV">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="lib/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/reveal.css" />
+		<link rel="stylesheet" href="css/theme/simple.css" />
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lte IE 8]>
+        <script src="excanvas.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Software Developer's Perception of Productivity</h2>
+					<h4>by André N. Meyer, Thomas Fritz, Gail C. Murphy, Thomas Zimmermann</h4>
+					<small>Presented by Sagar V Dwibhashyam</small>
+				</section>
+				<section>
+					<section>
+						<h1>The Problem</h1>
+					</section>
+					<section>
+						<h3>Common Refrain</h3>
+						<div style="border:5px solid black; border-radius:50%; background-color: rgb(182, 215, 168); width:200px; height:200px; margin:auto; display:block;"></div>
+						<p>Worlds Needs</p>
+						<hr style="border:5px solid black; width:50%;" />
+						<div style="border:3px solid black; border-radius:50%; background-color: rgb(109, 158, 235); width:50px; height:50px; margin:auto; display:block;"></div>
+						<p>Software Produced</p>
+					</section>
+					<section>
+						<h3>Addressing the Problem</h3>
+						<p style="position:absolute; left:0;">Decrease Demand</p>
+						<p style="position:absolute; right:0;">Increase Supply</p>
+						<div style="z-index:20; background-color:black; width:5px; height:500px; margin:auto; display:block;"></div>
+						<p style="position:absolute; right:0; top:200px;"><i style="color:green;" class="fa fa-check-circle fa-5x fa-fw"></i></p>
+						<p style="position:absolute; left:0; top:200px;"><i style="color:red;" class="fa fa-times-circle fa-5x fa-fw"></i></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Approach</h1>
+					</section>
+					<section>
+						<h2>Improve the Productivity</h2>
+					</section>
+					<section>
+						<h3>Research in the past</h3>
+						<div style="border:5px solid black; border-radius:50%; background-color: rgb(182, 215, 168); width:100px; height:100px; margin:auto; display:block;"></div>
+						<p>Productivity</p>
+
+						<p style="position:absolute; left:20%; -ms-transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); margin:auto;"><i class="fa fa-arrow-left"></i></p>
+						<p style="position:absolute; right:20%; -ms-transform: rotate(45deg);  -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); transform: rotate(45deg); margin:auto;"><i class="fa fa-arrow-right"></i></p>
+						<p style="margin:auto; display:block;"><i class="fa fa-arrow-down"></i></p>
+
+						<div style="margin-top:20px;">
+							<div style="border:3px solid black; border-radius:50%; background-color: rgb(109, 158, 235); width:50px; height:50px; position:absolute; left:10%;"></div>
+							<div style="border:3px solid black; border-radius:50%; background-color: rgb(109, 158, 235); width:50px; height:50px; position:absolute; right:10%;"></div>
+							<div style="border:3px solid black; border-radius:50%; background-color: rgb(109, 158, 235); width:50px; height:50px; margin:auto; display:block;"></div>
+
+							<div style="margin:10px;">
+								<small style="text-align:left; position:absolute; left:0;">Number of Lines of Code</small>
+								<small style="text-align:right; position:absolute; right:0;">Tools and Techniques</small>
+								<small style="text-align:center; margin:auto; display:block;">Workspace</small>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Studies</h2>
+						<p style="position:absolute; left:0;">Survey</p>
+						<p style="position:absolute; right:0;">Observation</p>
+						<div style="z-index:20; background-color:black; width:5px; height:200px; margin:auto; display:block;"></div>
+						<small><ul style="position:absolute; left:0; top:200px;">
+								<li>379 developers participated</li>
+								<li>Average experience = 9.2 yrs</li>
+						</ul></small>
+
+						<small><ul style="position:absolute; right:0; top:200px;">
+								<li>11 developers participated</li>
+								<li>Average experience = 5.4 yrs</li>
+						</ul></small>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Results : Survey</h1>
+					</section>
+					<section>
+						<p style="z-index:20; margin:auto; display:block;">A day is productive when ...</p>
+						<div id="chart1-legend">
+							<small></small>
+						</div>
+						<iframe id="chart1" class="stretch" scrolling="no" style="overflow:hidden;" data-chart ></iframe>
+					</section>
+					<section>
+						<p style="z-index:20; margin:auto; display:block;">Productive or not?</p>
+						<div id="chart2-legend">
+							<small></small>
+						</div>
+						<iframe id="chart2" class="stretch" scrolling="no" style="overflow:hidden;" data-chart ></iframe>
+					</section>
+					<section>
+						<h3>Measuring/Assessing Productivity</h3>
+						<ul>
+							<li>Based on tasks/work items completed</li>
+							<li>Different for each developer</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Results : Obsevation</h1>
+					</section>
+					<section>
+						<p>Task Switching</p>
+						<div id="chart3-legend">
+							<small></small>
+						</div>
+						<iframe id="chart3" class="stretch" scrolling="no" style="overflow:hidden;" data-chart ></iframe>
+					</section>
+					<section>
+						<p>Activity Switching</p>
+						<div id="chart4-legend">
+							<small></small>
+						</div>
+						<iframe id="chart4" class="stretch" scrolling="no" style="overflow: hidden;" data-chart></iframe>
+					</section>
+					<section>
+						<h2>Workflows</h2>
+						<ul>
+							<li><p>Cost of switching</p>
+								<ul>
+									<li><p>A creative task and externally imposed switch is more expensive</p></li>
+									<li><p>A routine task and self-inflicted switch is less expensive.</p></li>
+								</ul>
+							</li>
+						</ul>
+						<img src="lib/media/soft-dev-percp-of-prod-latex.png" style="border:none; box-shadow:none;"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Suggestions</h1>
+					</section>
+					<section>
+						<h2>Retrospective Analytic Tools</h2>
+					</section>
+					<section>
+						<h2>Context Switch Reduction</h2>
+					</section>
+					<section>
+						<h2>Setting Goals</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Lessons Learned</h1>
+					</section>
+					<section>
+						<ul>
+							<li>Supply of software to meet demand is insufficient.</li>
+							<li>Solution to address supply is improve productivity.</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Coding, Problem solving, Debugging = Highly productive.</li>
+							<li>Meetings, Documentation, Reports = Non productive.</li>
+						</ul>
+						<p>In general</p>
+					</section>
+					<section>
+						<img src="lib/media/soft-dev-percp-of-prod-latex.png" style="border:none; box-shadow:none;"/>
+						<ul>
+							<li>No best measure to assess productivity.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Various Tools and Techniques:</h3>
+						<ul>
+							<li>Pomodoro technique</li>
+							<li>Codealike,Fitbit, Nike+fuelband</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Conclusion</h1>
+					</section>
+					<section>
+						<h2>Resources:</h2>
+						<ul>
+							<li>The research document:
+								<ul>
+									<li><a href="http://research.microsoft.com/pubs/228971/meyer-fse-2014.pdf" target="_blank">http://research.microsoft.com/pubs/228971/meyer-fse-2014.pdf</a></li>
+								</ul>
+							</li>
+							<li>Pomodoro technique:
+								<ul>
+									<li><a href="http://pomodorotechnique.com/" target="_blank">http://pomodorotechnique.com/</a></li>
+								</ul>
+							</li>
+							<li>Presentation url:
+								<ul>
+									<li><a href="https://slides.com/dvenkatsagar/software-developers-perception-of-productivity/" target="_blank">https://slides.com/dvenkatsagar/software-developers-perception-of-productivity/</a></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+    </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			var items = [
+				{
+					selector:"#chart1",
+					type:"radar",
+					data: {
+						labels: ["Complete Tasks/Goals", "No interruptions/distractions", "No meetings", "Clear goals/requirements", "Planning workday"],
+    				datasets: [
+        			{
+								label: "Reasons",
+              	fillColor: "rgba(151,187,205,0.8)",
+              	strokeColor: "rgba(151,187,205,1)",
+              	pointColor: "rgba(151,187,205,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(151,187,205,1)",
+              	data: [192,182,79,72,62]
+        			}
+						]
+					},
+					options:{
+						responsive:true,
+						scaleOverride: true,
+						scaleSteps: 4,
+						scaleStepWidth: 50,
+						scaleStartValue: 0,
+						pointLabelFontSize : 14,
+						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
+					}
+				},
+				{
+					selector:"#chart2",
+					type:"radar",
+					data: {
+						labels: ["Coding", "Meetings", "Planning", "Documentation/reports"],
+    				datasets: [
+							{
+              	label: "Productive",
+              	fillColor: "rgba(205,151,187,0.5)",
+              	strokeColor: "rgba(205,151,187,1)",
+              	pointColor: "rgba(205,151,187,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(205,151,187,1)",
+              	data: [236, 57, 25, 22]
+            	},
+            	{
+              	label: "Unproductive",
+              	fillColor: "rgba(151,187,205,0.5)",
+              	strokeColor: "rgba(151,187,205,1)",
+              	pointColor: "rgba(151,187,205,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(151,187,205,1)",
+              	data: [47, 191, 58, 25]
+            	}
+						]
+					},
+					options:{
+						responsive:true,
+						scaleOverride: true,
+						scaleSteps: 5,
+						scaleStepWidth: 50,
+						scaleStartValue: 0,
+						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
+						pointLabelFontSize : 14
+					}
+				},
+				{
+					selector:"#chart3",
+					type:"radar",
+					data: {
+						labels: ["Number of Tasks", "Tasks switch rate per hour", "Time spent per task"],
+    				datasets: [
+							{
+              	label: "Max",
+              	fillColor: "rgba(205,151,187,0.5)",
+              	strokeColor: "rgba(205,151,187,1)",
+              	pointColor: "rgba(205,151,187,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(205,151,187,1)",
+              	data: [7.1, 21.8, 9.5]
+            	},
+            	{
+              	label: "Mean",
+              	fillColor: "rgba(151,187,205,0.5)",
+              	strokeColor: "rgba(151,187,205,1)",
+              	pointColor: "rgba(151,187,205,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(151,187,205,1)",
+              	data: [4.8, 13.3, 6.2]
+            	},
+							{
+              	label: "Min",
+              	fillColor: "rgba(187,205,151,0.5)",
+              	strokeColor: "rgba(187,205,151,1)",
+              	pointColor: "rgba(187,205,151,1)",
+              	pointStrokeColor: "#fff",
+              	pointHighlightFill: "#fff",
+              	pointHighlightStroke: "rgba(187,205,151,1)",
+              	data: [2.5, 4.8, 1.9]
+            	}
+						]
+					},
+					options:{
+						responsive:true,
+						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
+						pointLabelFontSize : 14,
+						scaleOverride: true,
+						scaleSteps: 3,
+						scaleStepWidth: 10,
+						scaleStartValue: 0,
+					}
+				},{
+					selector:"#chart4",
+					type: "doughnut",
+					data : [
+    				{
+        			value: 56.7,
+        			color:"#F7464A",
+        			highlight: "#FF5A5E",
+        			label: "Developing(%)"
+    				},
+						{
+				        value: 4.9,
+				        color: "#46BFBD",
+				        highlight: "#5AD3D1",
+				        label: "Emailing(%)"
+				    },
+						{
+				        value: 7.9,
+				        color: "#FDB45C",
+				        highlight: "#FFC870",
+				        label: "Planning(%)"
+				    },
+						{
+				        value: 2.7,
+				        color: "#949FB1",
+				        highlight: "#A8B3C5",
+				        label: "Documenting(%)"
+				    },
+						{
+				        value: 18,
+				        color: "#4D5360",
+				        highlight: "#616774",
+				        label: "Meeting(%)"
+				    },
+						{
+							value: 4.4,
+							color: "#42AFFA",
+							highlight: "#5AD3D1",
+							label: "Browsing(%)"
+						}
+					],
+					options : {
+						responsive:true,
+						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div style=\"background-color:<%=segments[i].fillColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
+					}
+				}
+			];
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber : true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				chart : {
+					items : items
+				},
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chartjs/Chart.min.js'},
+					{ src: 'plugin/chartjs/charted.js'}
+				]
+			});
+
+			Reveal.addEventListener("slidechanged",function(event){
+				setTimeout(function(){
+					switch(event.indexh){
+						case 3:
+							switch(event.indexv){
+								case 1:
+									var legend1 = RevealChart.chart1.item.chart.generateLegend();
+									document.querySelector("#chart1-legend small").innerHTML = legend1;
+									break;
+								case 2:
+									var legend2 = RevealChart.chart2.item.chart.generateLegend();
+									document.querySelector("#chart2-legend small").innerHTML = legend2;
+									break;
+							}
+							break;
+						case 4:
+							switch(event.indexv){
+								case 1:
+									var legend3 = RevealChart.chart3.item.chart.generateLegend();
+									document.querySelector("#chart3-legend small").innerHTML = legend3;
+									break;
+								case 2:
+									var legend4 = RevealChart.chart4.item.chart.generateLegend();
+									document.querySelector("#chart4-legend small").innerHTML = legend4;
+									RevealChart.chart4.item.canvas.style.margin = "-10px auto -10px auto";
+									break;
+							}
+							break;
+					}
+				},500);
+			},false);
+
+			</script>
+	</body>
+</html>
