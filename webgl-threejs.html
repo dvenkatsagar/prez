@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WebGL and Three.js</title>
+
+		<meta name="description" content="An introduction to the Webgl framework and three.js library">
+		<meta name="author" content="Sagar DV">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lte IE 8]>
+        <script src="excanvas.js"></script>
+    <![endif]-->
+
+    <style>
+    .reveal .slides section h1,
+    .reveal .slides section h2,
+    .reveal .slides section h3,
+    .reveal .slides section h4,
+    .reveal .slides section h5,
+    .reveal .slides section h6,
+    .reveal .slides section p,
+    .reveal .slides section li{
+      color : #DCDCDC;
+    }
+    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>WebGL and Three.js</h1>
+					<h4>Graphics on your browser</h4>
+				</section>
+        <section>
+          <h2>What is WebGL?</h2>
+          <p>A graphics library for your browser where you can render low-level 3D and 2D graphics on the HTML5 Canvas.</p>
+        </section>
+        <section>
+          <h2>WebGL Features and Properties</h2>
+          <ul>
+            <li>Based on OpenGL ES 2.0.</li>
+            <li>It uses a Shader-based API for textures via GLSL(OpenGL shading Language).</li>
+            <li>Image Processing.</li>
+            <li>3D physics simulation.</li>
+            <li>And so much more ...</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Example</h2>
+            <iframe src="lib/res/webgl-threejs/webgl-example.html" style="overflow:hidden;margin : auto 10px auto auto;" class="stretch" scrolling="no" id="webgl-example"></iframe>
+          </section>
+          <section>
+            <h2>Code</h2>
+            <p>click <a href="view-source:https://dvenkatsagar.github.io/prez/lib/res/webgl-threejs/index.html">here</a></p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+    <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      slideNumber : true,
+      //previewLinks: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+        //{ src: 'plugin/chartjs/Chart.min.js'},
+        //{ src: 'plugin/chartjs/charted.js'}
+      ]
+    });
+    </script>
+  </body>
+</html>
