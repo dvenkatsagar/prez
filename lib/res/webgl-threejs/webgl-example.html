@@ -188,63 +188,15 @@
     }
 
 
-    var xRot = 0;
-    var xSpeed = 0;
+    var xRot = 0.005;
+    var xSpeed = 25;
 
-    var yRot = 0;
-    var ySpeed = 0;
+    var yRot = 0.005;
+    var ySpeed = 25;
 
     var z = -5.0;
 
     var filter = 0;
-
-
-    var currentlyPressedKeys = {};
-
-    function handleKeyDown(event) {
-        currentlyPressedKeys[event.keyCode] = true;
-
-        if (String.fromCharCode(event.keyCode) == "F") {
-            filter += 1;
-            if (filter == 3) {
-                filter = 0;
-            }
-        }
-    }
-
-
-    function handleKeyUp(event) {
-        currentlyPressedKeys[event.keyCode] = false;
-    }
-
-
-    function handleKeys() {
-        if (currentlyPressedKeys[33]) {
-            // Page Up
-            z -= 0.05;
-        }
-        if (currentlyPressedKeys[34]) {
-            // Page Down
-            z += 0.05;
-        }
-        if (currentlyPressedKeys[37]) {
-            // Left cursor key
-            ySpeed -= 1;
-        }
-        if (currentlyPressedKeys[39]) {
-            // Right cursor key
-            ySpeed += 1;
-        }
-        if (currentlyPressedKeys[38]) {
-            // Up cursor key
-            xSpeed -= 1;
-        }
-        if (currentlyPressedKeys[40]) {
-            // Down cursor key
-            xSpeed += 1;
-        }
-    }
-
 
     var cubeVertexPositionBuffer;
     var cubeVertexTextureCoordBuffer;
@@ -398,7 +350,6 @@
 
     function tick() {
         requestAnimFrame(tick);
-        handleKeys();
         drawScene();
         animate();
     }
@@ -415,9 +366,6 @@
         gl.clearColor(0.0, 0.0, 0.0, 1.0);
         gl.enable(gl.DEPTH_TEST);
 
-        document.onkeydown = handleKeyDown;
-        document.onkeyup = handleKeyUp;
-
         tick();
     }
 
@@ -428,15 +376,7 @@
 
 
 <body onload="webGLStart();">
-    <canvas id="lesson06-canvas" style="border: none;margin:auto; display:block;" width="500" height="500"></canvas>
-
-    <!--h2>Controls:</h2>
-
-    <ul>
-        <li><code>Page Up</code>/<code>Page Down</code> to zoom out/in
-        <li>Cursor keys: make the cube rotate (the longer you hold down a cursor key, the more it accelerates)
-        <li><code>F</code> to toggle through three different kinds of texture filters
-    </ul-->
+    <canvas id="lesson06-canvas" style="border: none;margin:auto; display:block;" width="1000" height="500"></canvas>
 </body>
 
 </html>
