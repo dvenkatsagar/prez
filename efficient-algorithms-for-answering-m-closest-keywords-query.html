@@ -227,7 +227,7 @@
 							<li>NY -485,059 Objects</li>
 							<li class="fragment">116,546 Unique keywords</li>
 							<li class="fragment">1,143,013 Total keywords</li>
-							<li class="fragment">Query file: where you hThe numbers of keywords in the query are varied so evaluate the performance.</li>
+							<li class="fragment">Query file: where you have the numbers of keywords in the query are varied so evaluate the performance.</li>
 						</ul>
 					</section>
 				</section>
@@ -253,167 +253,6 @@
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script>
-			var items = [
-				{
-					selector:"#chart1",
-					type:"radar",
-					data: {
-						labels: ["Complete Tasks/Goals", "No interruptions/distractions", "No meetings", "Clear goals/requirements", "Planning workday"],
-    				datasets: [
-        			{
-								label: "Reasons",
-              	fillColor: "rgba(151,187,205,0.8)",
-              	strokeColor: "rgba(151,187,205,1)",
-              	pointColor: "rgba(151,187,205,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(151,187,205,1)",
-              	data: [192,182,79,72,62]
-        			}
-						]
-					},
-					options:{
-						responsive:true,
-						scaleOverride: true,
-						scaleSteps: 4,
-						scaleStepWidth: 50,
-						scaleStartValue: 0,
-						pointLabelFontSize : 14,
-						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
-					}
-				},
-				{
-					selector:"#chart2",
-					type:"radar",
-					data: {
-						labels: ["Coding", "Meetings", "Planning", "Documentation/reports"],
-    				datasets: [
-							{
-              	label: "Productive",
-              	fillColor: "rgba(205,151,187,0.5)",
-              	strokeColor: "rgba(205,151,187,1)",
-              	pointColor: "rgba(205,151,187,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(205,151,187,1)",
-              	data: [236, 57, 25, 22]
-            	},
-            	{
-              	label: "Unproductive",
-              	fillColor: "rgba(151,187,205,0.5)",
-              	strokeColor: "rgba(151,187,205,1)",
-              	pointColor: "rgba(151,187,205,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(151,187,205,1)",
-              	data: [47, 191, 58, 25]
-            	}
-						]
-					},
-					options:{
-						responsive:true,
-						scaleOverride: true,
-						scaleSteps: 5,
-						scaleStepWidth: 50,
-						scaleStartValue: 0,
-						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
-						pointLabelFontSize : 14
-					}
-				},
-				{
-					selector:"#chart3",
-					type:"radar",
-					data: {
-						labels: ["Number of Tasks", "Tasks switch rate per hour", "Time spent per task"],
-    				datasets: [
-							{
-              	label: "Max",
-              	fillColor: "rgba(205,151,187,0.5)",
-              	strokeColor: "rgba(205,151,187,1)",
-              	pointColor: "rgba(205,151,187,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(205,151,187,1)",
-              	data: [7.1, 21.8, 9.5]
-            	},
-            	{
-              	label: "Mean",
-              	fillColor: "rgba(151,187,205,0.5)",
-              	strokeColor: "rgba(151,187,205,1)",
-              	pointColor: "rgba(151,187,205,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(151,187,205,1)",
-              	data: [4.8, 13.3, 6.2]
-            	},
-							{
-              	label: "Min",
-              	fillColor: "rgba(187,205,151,0.5)",
-              	strokeColor: "rgba(187,205,151,1)",
-              	pointColor: "rgba(187,205,151,1)",
-              	pointStrokeColor: "#fff",
-              	pointHighlightFill: "#fff",
-              	pointHighlightStroke: "rgba(187,205,151,1)",
-              	data: [2.5, 4.8, 1.9]
-            	}
-						]
-					},
-					options:{
-						responsive:true,
-						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div style=\"background-color:<%=datasets[i].strokeColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
-						pointLabelFontSize : 14,
-						scaleOverride: true,
-						scaleSteps: 3,
-						scaleStepWidth: 10,
-						scaleStartValue: 0,
-					}
-				},{
-					selector:"#chart4",
-					type: "doughnut",
-					data : [
-    				{
-        			value: 56.7,
-        			color:"#F7464A",
-        			highlight: "#FF5A5E",
-        			label: "Developing(%)"
-    				},
-						{
-				        value: 4.9,
-				        color: "#46BFBD",
-				        highlight: "#5AD3D1",
-				        label: "Emailing(%)"
-				    },
-						{
-				        value: 7.9,
-				        color: "#FDB45C",
-				        highlight: "#FFC870",
-				        label: "Planning(%)"
-				    },
-						{
-				        value: 2.7,
-				        color: "#949FB1",
-				        highlight: "#A8B3C5",
-				        label: "Documenting(%)"
-				    },
-						{
-				        value: 18,
-				        color: "#4D5360",
-				        highlight: "#616774",
-				        label: "Meeting(%)"
-				    },
-						{
-							value: 4.4,
-							color: "#42AFFA",
-							highlight: "#5AD3D1",
-							label: "Browsing(%)"
-						}
-					],
-					options : {
-						responsive:true,
-						legendTemplate : "<ul style=\"list-style:none; position:absolute; left:0;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div style=\"background-color:<%=segments[i].fillColor%>; width:10px; height:10px; display:inline-block; margin-top:8px; margin-right:5px;\"></div><span><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
-					}
-				}
-			];
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -425,9 +264,6 @@
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				chart : {
-					items : items
-				},
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -435,44 +271,9 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/chartjs/Chart.min.js'},
-					{ src: 'plugin/chartjs/charted.js'}
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
-			Reveal.addEventListener("slidechanged",function(event){
-				setTimeout(function(){
-					switch(event.indexh){
-						case 3:
-							switch(event.indexv){
-								case 1:
-									var legend1 = RevealChart.chart1.item.chart.generateLegend();
-									document.querySelector("#chart1-legend small").innerHTML = legend1;
-									break;
-								case 2:
-									var legend2 = RevealChart.chart2.item.chart.generateLegend();
-									document.querySelector("#chart2-legend small").innerHTML = legend2;
-									break;
-							}
-							break;
-						case 4:
-							switch(event.indexv){
-								case 1:
-									var legend3 = RevealChart.chart3.item.chart.generateLegend();
-									document.querySelector("#chart3-legend small").innerHTML = legend3;
-									break;
-								case 2:
-									var legend4 = RevealChart.chart4.item.chart.generateLegend();
-									document.querySelector("#chart4-legend small").innerHTML = legend4;
-									RevealChart.chart4.item.canvas.style.margin = "-10px auto -10px auto";
-									break;
-							}
-							break;
-					}
-				},500);
-			},false);
-
 			</script>
 	</body>
 </html>
