@@ -95,7 +95,7 @@
 						</ul>
 					</section>
 					<section>
-						<img src="./lib/media/MCK.png" /> 
+						<img src="./lib/media/MCK.png" />
 					</section>
 				</section>
 				<section>
@@ -172,7 +172,7 @@
 					</section>
 					<section>
 						<ul>
-							<li>Given a set of keywords ψ and an object o, if there exists no o-across keywords enclosing circle (KECo) with diameter, D then no KECo exists whose diameter is smaller than D.</li>
+							<li>Given a set of keywords &psi; and an object o, if there exists no o-across keywords enclosing circle (KECo) with diameter, D then no KECo exists whose diameter is smaller than D.</li>
 							<li class="fragment">We use binary search to find the diameter and position of SKECo.</li>
 							<li class="fragment">Here the Upper bound of the algorithm will be the first diameter found and the lower bound will be already be calculated from the greedy algorithm (GKG).</li>
 							<li class="fragment">Approximation Ratio: 2/√3 + e, where e is an arbitrary small value.</li>
@@ -185,7 +185,7 @@
 					</section>
 					<section>
 						<ul>
-							<li>In the above approach, if on the early processed objects the circles found are large, the upper bound is loose for sub-sequent search and the checking cost is high.</li>
+							<li>In the above approach, if, on the early processed objects, the circles found are large, the upper bound is loose for sub-sequent search and the checking cost is high.</li>
 							<li class="fragment">To overcome this problem, we do binary search on all the objects with infrequent keyword.</li>
 							<li class="fragment">In this algorithm, we first do the binary search and then find object across keywords enclosing circle.</li>
 						</ul>
@@ -198,8 +198,8 @@
 					<section>
 						<ul>
 							<li>In the EXACT Algorithm, we use the best feature of the above algorithms </li>
-							<li class="fragment">First we find the object group using the SKECa+ algorithm.</li>
-							<li class="fragment">The diameters using the Minimum Covering circle in SKEC algorithm for the above groups.</li>
+							<li class="fragment">First, we find the object group using the SKECa+ algorithm.</li>
+							<li class="fragment">The diameters that use the Minimum Covering circle in SKEC algorithm, are used for the above groups.</li>
 							<li class="fragment">We check which of these groups have least diameter.</li>
 							<li class="fragment">Then return that as a best suitable group.</li>
 						</ul>
