@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Augmented Reality on the web browser in the field of medical sciences</title>
+
+		<meta name="description" content="A presentation on the tools used create the AR effect on the web browsers">
+		<meta name="author" content="Sagar DV">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="lib/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/reveal.css" />
+		<link rel="stylesheet" href="css/theme/simple.css" />
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lte IE 8]>
+        <script src="excanvas.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Augmented Reality on the web browser in the field of medical sciences</h2>
+					<small>Presented by Sagar V Dwibhashyam</small>
+				</section>
+				<section>
+					<section>
+						<h1>Introduction</h1>
+					</section>
+					<section>
+						<p>Augmented Reality</p>
+						<ul>
+							<li class="fragment">Integration of Virtual Elements with the Real-World Elements.</li>
+						</ul>
+						<p>
+							<iframe class="fragment" width="560" height="315" src="https://www.youtube.com/embed/3AADEqLIALk" frameborder="0" allowfullscreen></iframe>
+						</p>
+					</section>
+					<section>
+						<p>WebGL</p>
+						<ul>
+							<li class="fragment">2D and 3D graphics on the browser</li>
+						</ul>
+						<p>
+							<iframe class="fragment" width="560" height="315" src="https://dvenkatsagar.github.io/proj/cube/webgl-cube.html" frameborder="0"></iframe>
+						</p>
+					</section>
+					<section>
+						<p>Augmented Reality on the Browser</p>
+						<p>
+							<img src="https://dvenkatsagar.github.io/proj/rubikAR/64.png" />
+						</p>
+						<p><a href="http://tinyurl.com/hkujfae">http://tinyurl.com/hkujfae</a></p>
+					</section>
+				</section>
+				<section>
+					<h1>Project</h1>
+				</section>
+				<section>
+					<section>
+						<h1>Tools and Frameworks</h1>
+					</section>
+					<section>
+						<ul>
+							<li>Backend components
+								<ul>
+									<li class="fragment">Node.js server</li>
+									<li class="fragment">Express.js Engine</li>
+									<li class="fragment">Jade/Pug Templating Engine</li>
+									<li class="fragment">Node-VTK</li>
+									<li class="fragment">MongoDB and Mongoose</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Frontend components
+								<ul>
+									<li class="fragment">Jquery.js</li>
+									<li class="fragment">PureCSS and Font-Awesome</li>
+									<li class="fragment">Papaya Viewer</li>
+									<li class="fragment">Three.js</li>
+									<li class="fragment">Threex.WebAR</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Implementation</h1>
+					</section>
+					<section>
+						<p>Route Establishment</p>
+						<ul>
+							<li class="fragment">Index Route</li>
+							<li class="fragment">Get-set Route</li>
+							<li class="fragment">Gen-Model Route</li>
+							<li class="fragment">Show-3d Route</li>
+							<li class="fragment">Show-AR</li>
+						</ul>
+					</section>
+					<section>
+						<p>Interface</p>
+						<img style="height:auto;width:500px" src="./lib/media/interface_bonear.png" />
+					</section>
+					<section>
+						<p>Model Generation</p>
+						<ul>
+							<li class="fragment">VTK Pipeline</li>
+							<li class="fragment">Reading the Dicom Image Set</li>
+							<li class="fragment">Finding the axis, pixel spacing and dimension of the set</li>
+							<li class="fragment">Applying the threshold</li>
+							<li class="fragment">Generate the base model with a Discrete Marching Cube algorithm</li>
+							<li class="fragment">Decimate and optimize the model</li>
+						</ul>
+					</section>
+					<section>
+						<p>Model Visualization</p>
+							<iframe class="stretch" src="https://dvenkatsagar.github.io/proj/boneAR/CT3D-Showing-Model.html" frameborder="0"></iframe>
+						<p><a href="http://tinyurl.com/zv98zsd">3D Model Sample</a></p>
+					</section>
+					<section>
+						<img class="stretch" src="./lib/media/ARModel_bonear.png" />
+						<p>AR Model Sample</p>
+					</section>
+					<section>
+						<p>VTP File Loader</p>
+						<p> An extension to the Three.js VTK Loader</p>
+					</section>
+					<section>
+						<p>Format</p>
+						<pre><code>
+<VTKFile type="..." version="version" byte_order="byte-order" ...>
+	<Cells></Cells>
+	<Points></Points>
+	<Polys></Polys>
+	<Stripes></Stripes>
+</VTKFile>
+						</code></pre>
+						<p class="fragment">Maybe compressed</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Evaluation</h1>
+					</section>
+					<section>
+						<p>Decimation and Smoothening</p>
+					</section>
+					<section>
+						<p>Frame Rate</p>
+					</section>
+					<section>
+						<p>File Loading</p>
+					</section>
+				</section>
+				<section>
+					<h1>Conclusion</h1>
+				</section>
+				<section>
+					<h1>Thank You</h1>
+				</section>
+			</div>
+    </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber : true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+			</script>
+	</body>
+</html>
